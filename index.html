@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+    <title>Meine neue Website</title>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> 
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"/> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Mein Yogastudio in Berlin!</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about.html">Über das Studio</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Kurse</a></li>
+                  <li><a class="dropdown-item" href="#">Ausstattung</a></li>
+                  <li><a class="dropdown-item" href="#">Personal Training</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Suche</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="card text-center">
+        <div class="card-body">
+            <br />
+            <br />
+            <a href="https://yahoo.com">
+                <img id="randomDog" width="500"/>   
+            </a>
+            <br />
+            <br />
+          <h1 class="card-title">Mein Yogastudio</h1>
+          <p class="card-text">Yoga ist eine der sechs klassischen Schulen (Darshanas) der indischen Philosophie. Es gibt viele verschiedene Formen des Yoga, oft mit einer eigenen Philosophie und Praxis. In Europa und Nordamerika wurden bis vor kurzem unter dem Begriff Yoga oft nur körperliche Übungen verstanden – die Asanas oder Yogasanas – und der Begriff somit weitgehend mit Hatha Yoga gleichgesetzt.</p>
+          <button type="button" class="btn btn-primary btn-lg">Mehr Infos</button>  
+          <button id="meineId" type="button" class="btn btn-outline-primary btn-lg">Buchen</button>
+        </div>
+        <br />
+        <br />
+        <div class="card-footer text-muted">
+          Nächster Kurs: 1.1.2022
+        </div>
+        
+      </div>
+      <div class="container">
+        <br />
+        <br />
+      <h2>Kurszeiten</h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Kurszeit</th>
+            <th scope="col">Buchen</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>1.1.2022</td>
+            <td><button type="button" class="btn btn-outline-primary">Buchen</button></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>1.2.2022</td>
+            <td><button type="button" class="btn btn-outline-primary">Buchen</button></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>1.3.2022</td>
+            <td><button type="button" class="btn btn-outline-primary">Buchen</button></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <br />
+      <br />      
+      <br />
+      <br />
+      <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+          </ul>
+          <p class="text-center text-muted">&copy; 2021 Company, Inc</p>
+        </footer>
+      </div>
+    <script>
+
+        function bookCourse() {
+            prompt("Kurs gebucht!");
+        }
+
+        const button = document.getElementById("meineId");
+        button.addEventListener("click", bookCourse )
+
+    </script>
+
+<script>
+    async function fetchDogPic() {
+      const response = await fetch('https://random.dog/woof.json');
+      const dog = await response.json();
+      console.log(dog)
+      document.getElementById("randomDog").src = dog.url;
+    }
+    fetchDogPic()
+  </script>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,19 @@
+body {
+    background: #eeeeee;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #666666;
+    padding-left: 100px;
+    padding-top: 100px;
+    width: 600px;
+}
+
+/* Mein Kommentar! Das ist mein erstes CSS File! */
+
+button {
+    width: 100px;
+}
+
+
+.beautiful {
+    color: red;
+}
